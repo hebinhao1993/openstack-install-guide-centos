@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-yum install centos-release-openstack-rocky
+yum install -y centos-release-openstack-rocky
 yum upgrade
-yum install python-openstackclient
-yum install openstack-selinux
+yum install -y python-openstackclient
+yum install -y openstack-selinux

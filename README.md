@@ -93,11 +93,24 @@ sudo ./install-openstack-package.sh
 
 ## SQL database
 
-大多数的open stack服务使用SQL数据库来保存信息，通常数据库运行在controller节点上。
+大多数的open stack服务使用SQL数据库来保存信息，通常数据库运行在controller节点上。所以应该只有controller节点需要安装。
 
 ```sh
-yum install mariadb mariadb-server python2-PyMySQL
+sudo ./install-database.sh
 ```
+
+## message queue
+
+message queue 通常运行在controller节点上。所以应该只有controller节点需要安装。
+
+## memcached
+
+The Identity service authentication mechanism for services uses Memcached to cache tokens. The memcached service typically runs on the controller node. 所以应该只有controller节点需要安装。
+
+## etcd
+
+OpenStack services may use Etcd, a distributed reliable key-value store for distributed key locking, storing configuration, keeping track of service live-ness and other scenarios.
+The etcd service runs on the controller node.所以应该只有controller节点需要安装。
 
 ## reference
 
