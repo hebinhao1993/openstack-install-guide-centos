@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 yum install -y chrony
-if [ -e /etc/chrony.conf.back ]; then
+if [ -e /etc/chrony.conf.backup ]; then
     cp /etc/chrony.conf.backup /etc/chrony.conf
 else
     cp /etc/chrony.conf /etc/chrony.conf.backup

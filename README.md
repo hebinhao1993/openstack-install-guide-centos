@@ -128,6 +128,11 @@ sudo ./install-etcd.sh
 
 keystone安装在controller节点上。
 
+```sh
+sudo ./install-keystone.sh
+source ./keystone-cfg-admin-account.sh
+```
+
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
