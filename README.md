@@ -69,6 +69,10 @@ sudo ./configure-name-solution.sh
 
 这里需要注意一点，前面已经说过，这里的网络是nat网络，由于采用了dhcp所以，所以每次启动虚拟机，或者虚拟机迁移之后很可能网络地址会改变，那么这里的hosts也需要重新修改。
 
+## NTP
+
+### controller node
+
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
