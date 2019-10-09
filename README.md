@@ -38,7 +38,21 @@ reboot
 ## 关闭防火墙
 
 ```sh
-sudo ./1.close-fire-wall.sh
+sudo ./2.close-fire-wall.sh
+```
+
+## 设置主机名
+
+在controller虚拟机上
+
+```sh
+sudo hostnamectl set-hostname controller
+```
+
+在compute虚拟机上
+
+```sh
+sudo hostnamectl set-hostname compute1
 ```
 
 ## reference
