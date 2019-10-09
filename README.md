@@ -71,6 +71,14 @@ sudo ./configure-name-solution.sh
 
 ## NTP
 
+### controller节点
+
+```sh
+sudo ./ntp-controller.sh
+```
+
+### compute 节点
+
 ### controller node
 
 ## reference
