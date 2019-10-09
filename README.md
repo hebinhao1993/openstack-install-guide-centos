@@ -79,7 +79,25 @@ sudo ./ntp-controller.sh
 
 ### compute 节点
 
-### controller node
+```sh
+sudo ./ntp-compute.sh
+```
+
+## OpenStack packages
+
+所有的节点都需要安装，包括controller、compute、以及block storage节点。
+
+```sh
+sudo ./install-openstack-package.sh
+```
+
+## SQL database
+
+大多数的open stack服务使用SQL数据库来保存信息，通常数据库运行在controller节点上。
+
+```sh
+yum install mariadb mariadb-server python2-PyMySQL
+```
 
 ## reference
 
