@@ -10,11 +10,21 @@
 
 因为此处用虚拟机来搭建验证，因此management network采用nat网络(nat网络中虚拟机可以互相访问，但是主机以及外部网络无法访问虚拟机，这里有一点需要注意，nat网络中的ip地址是使用dhcp获取的，似乎无法使用静态地址，尝试过使用静态地址，可以用虚拟机ping通虚拟机，但是无法ping通外部网络，据说nat网络的dns服务也是使用dhcp来实现的，因此如果不使用dhcp就无法使用？)，provider network采用host only来实现(虚拟机之间可以相互访问，主机也可以访问虚拟机)
 
+nat网络: virtualbox -> 管理 -> 全局设定 -> 网络 -> 添加新的nat网络 (10.0.2.0/24)
+host only: virtualbox -> 管理 -> 主机网络管理器 -> 创建
+
+## 安装一些前置软件
+
+```sh
+sudo yum install -y git wget
+```
+## 配置yum源地址
+
+
 ## 关闭防火墙
 
 1.close-fire-wall.sh
 
-## 配置yum源地址
 
 ## reference
 
