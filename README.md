@@ -13,6 +13,10 @@
 nat网络: virtualbox -> 管理 -> 全局设定 -> 网络 -> 添加新的nat网络 (10.0.2.0/24)
 host only: virtualbox -> 管理 -> 主机网络管理器 -> 创建
 
+## 虚拟机内网络设置
+
+如果网络无法使用，则修改/etc/sysconfig/network-scripts/ifcfg-enp3s0，一般来说把onboot改为yes，再重启网络即可
+
 ## 安装一些前置软件
 
 ```sh
@@ -60,8 +64,10 @@ sudo hostnamectl set-hostname compute1
 在controller虚拟机和compute虚拟机上都要修改
 
 ```sh
-
+sudo ./configure-name-solution.sh
 ```
+
+这里需要注意一点，前面已经说过，这里的网络是nat网络，由于采用了dhcp所以，所以每次启动虚拟机，或者虚拟机迁移之后很可能网络地址会改变，那么这里的hosts也需要重新修改。
 
 ## reference
 
