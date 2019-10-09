@@ -17,14 +17,21 @@ host only: virtualbox -> 管理 -> 主机网络管理器 -> 创建
 
 ```sh
 sudo yum install -y git wget
+git clone https://github.com/hebinhao1993/openstack-install-guide-centos.git --depth=1
+cd openstack-install-guide-centos
 ```
+
 ## 配置yum源地址
 
+```sh
+sudo ./1.use-aliyun-mirror.sh
+```
 
 ## 关闭防火墙
 
-1.close-fire-wall.sh
-
+```sh
+sudo ./1.close-fire-wall.sh
+```
 
 ## reference
 
