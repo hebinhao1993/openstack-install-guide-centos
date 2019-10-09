@@ -116,6 +116,10 @@ The Identity service authentication mechanism for services uses Memcached to cac
 OpenStack services may use Etcd, a distributed reliable key-value store for distributed key locking, storing configuration, keeping track of service live-ness and other scenarios.
 The etcd service runs on the controller node.所以应该只有controller节点需要安装。
 
+```sh
+sudo ./install-etcd.sh
+```
+
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
