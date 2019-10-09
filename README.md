@@ -55,6 +55,14 @@ sudo hostnamectl set-hostname controller
 sudo hostnamectl set-hostname compute1
 ```
 
+## 修改hosts
+
+在controller虚拟机和compute虚拟机上都要修改
+
+```sh
+
+```
+
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
