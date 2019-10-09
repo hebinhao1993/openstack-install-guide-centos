@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-yum -y install mariadb mariadb-server python2-PyMySQL
+yum install -y mariadb mariadb-server python2-PyMySQL
 
 cat << EOF >> /etc/my.cnf.d/openstack.cnf
 bind-address = 10.10.2.15
