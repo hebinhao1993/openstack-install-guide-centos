@@ -67,7 +67,7 @@ sudo hostnamectl set-hostname compute1
 sudo ./configure-name-solution.sh
 ```
 
-这里需要注意一点，前面已经说过，这里的网络是nat网络，由于采用了dhcp所以，所以每次启动虚拟机，或者虚拟机迁移之后很可能网络地址会改变，那么这里的hosts也需要重新修改。
+这里需要**注意**一点，前面已经说过，这里的网络是nat网络，由于采用了dhcp所以，所以每次启动虚拟机，或者虚拟机迁移之后很可能网络地址会改变，那么这里的hosts也需要重新修改。
 
 ## NTP
 
@@ -119,6 +119,14 @@ The etcd service runs on the controller node.所以应该只有controller节点�
 ```sh
 sudo ./install-etcd.sh
 ```
+
+**注意**etcd这里的配置也使用了固定的ip，所以如果虚拟机重启等情况下，可能需要重新配置。
+
+## openstack service(rocky)
+
+### keystone
+
+keystone安装在controller节点上。
 
 ## reference
 
