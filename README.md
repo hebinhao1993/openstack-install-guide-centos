@@ -26,7 +26,7 @@ cd openstack-install-guide-centos
 参考[阿里开源镜像站](https://opsx.alibaba.com/mirror)
 
 ```sh
-sudo ./1.use-aliyun-mirror.sh
+sudo ./use-aliyun-mirror.sh
 ```
 
 ## 重启一下
@@ -38,7 +38,7 @@ reboot
 ## 关闭防火墙
 
 ```sh
-sudo ./2.close-fire-wall.sh
+sudo ./close-fire-wall.sh
 ```
 
 ## 设置主机名
