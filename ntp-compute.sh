@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -e
 yum install -y chrony
 if [ -e /etc/chrony.conf.backup ]; then
     cp /etc/chrony.conf.backup /etc/chrony.conf
@@ -14,3 +14,4 @@ sed -i -e 's/server 2.centos.pool.ntp.org iburst/#server 2.centos.pool.ntp.org i
 sed -i -e 's/server 3.centos.pool.ntp.org iburst/#server 3.centos.pool.ntp.org iburst/' /etc/chrony.conf
 systemctl enable chronyd.service
 systemctl start chronyd.service
+echo "install chrony done"

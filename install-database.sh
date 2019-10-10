@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e 
 yum install -y mariadb mariadb-server python2-PyMySQL
 
 if [ -e /etc/my.cnf.d/openstack.cnf ]; then
