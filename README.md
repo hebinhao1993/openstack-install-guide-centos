@@ -107,6 +107,8 @@ message queue 通常运行在controller节点上。所以应该只有controller�
 sudo ./install-rabbitmq.sh
 ```
 
+**注意**这里似乎存在问题，最后两条指令似乎要手动执行才行，不知原因。
+
 ## memcached
 
 The Identity service authentication mechanism for services uses Memcached to cache tokens. The memcached service typically runs on the controller node. 所以应该只有controller节点需要安装。
