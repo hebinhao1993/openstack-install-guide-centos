@@ -143,6 +143,7 @@ sudo ./install-keystone-part1.sh
 sudo ./install-keystone-part2.sh
 source ./keystone-cfg-admin-account.sh
 ./keystone-create-domain+.sh
+./keystone-verify.sh
 ```
 
 ## reference
