@@ -16,7 +16,7 @@ else
 fi
 # edit /etc/httpd/conf/httpd.conf 
 # ServerName controller
-sed -i -e 's/^#ServerName www.example.com:80/ServerName Controller/'
+sed -i -e 's/^#ServerName www.example.com:80/ServerName Controller/' /etc/httpd/conf/httpd.conf
 
 ln -s /usr/share/keystone/wsgi-keystone.conf /etc/httpd/conf.d/
 # Finalize the installation
