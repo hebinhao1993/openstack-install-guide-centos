@@ -130,6 +130,16 @@ keystone安装在controller节点上。
 
 ```sh
 sudo ./install-keystone.sh
+#
+# here we need to edit the edit /etc/keystone/keystone.conf by hand
+# todo: use script instead of this manualy operation.
+#
+# [database]
+# ...
+# connection = mysql+pymysql://keystone:123456@controller/keystone
+# [token]
+# ...
+# provider = fernet
 source ./keystone-cfg-admin-account.sh
 ```
 
