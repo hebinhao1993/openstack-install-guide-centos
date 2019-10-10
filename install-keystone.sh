@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
-#set -e
+set -e
+mysql -u root -p123456 < keystone.sql
+yum install -y openstack-keystone httpd mod_wsgi
+
+backup /etc/keystone/keystone.conf
+if [ -e /etc/keystone/keystone.conf.backup ]; then
+    cp /etc/keystone/keystone.conf.backup /etc/keystone/keystone.conf
+else
+    cp /etc/keystone/keystone.conf /etc/keystone/keystone.conf.backup
+fi
+cp keystone.conf /etc/keystone/keystone.conf
 su -s /bin/sh -c "keystone-manage db_sync" keystone
 keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
 keystone-manage credential_setup --keystone-user keystone --keystone-group keystone
@@ -22,3 +32,5 @@ ln -s /usr/share/keystone/wsgi-keystone.conf /etc/httpd/conf.d/
 # Finalize the installation
 systemctl enable httpd.service
 systemctl start httpd.service
+
+echo "keystone install done"

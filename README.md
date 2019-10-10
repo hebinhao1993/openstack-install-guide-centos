@@ -135,18 +135,7 @@ sudo ./install-etcd.sh
 keystone安装在controller节点上。
 
 ```sh
-sudo ./install-keystone-part1.sh
-#
-# here we need to edit the edit /etc/keystone/keystone.conf by hand
-# todo: use script instead of this manualy operation.
-#
-# [database]
-# ...
-# connection = mysql+pymysql://keystone:123456@controller/keystone
-# [token]
-# ...
-# provider = fernet
-sudo ./install-keystone-part2.sh
+sudo ./install-keystone.sh
 source ./keystone-cfg-admin-account.sh
 ./keystone-create-domain+.sh
 ./keystone-verify.sh
