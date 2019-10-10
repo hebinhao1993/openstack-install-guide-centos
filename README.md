@@ -129,7 +129,7 @@ sudo ./install-etcd.sh
 keystone安装在controller节点上。
 
 ```sh
-sudo ./install-keystone.sh
+sudo ./install-keystone-part1.sh
 #
 # here we need to edit the edit /etc/keystone/keystone.conf by hand
 # todo: use script instead of this manualy operation.
@@ -140,6 +140,7 @@ sudo ./install-keystone.sh
 # [token]
 # ...
 # provider = fernet
+sudo ./install-keystone-part2.sh
 source ./keystone-cfg-admin-account.sh
 ```
 
