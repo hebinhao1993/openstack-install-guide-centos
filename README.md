@@ -142,6 +142,7 @@ sudo ./install-keystone-part1.sh
 # provider = fernet
 sudo ./install-keystone-part2.sh
 source ./keystone-cfg-admin-account.sh
+./keystone-create-domain+.sh
 ```
 
 ## reference
