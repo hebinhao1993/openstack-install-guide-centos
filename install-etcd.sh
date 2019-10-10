@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 yum install -y etcd
 
 sed -i -e 's/^#ETCD_DATA_DIR/ETCD_DATA_DIR/' /etc/etcd/etcd.conf
@@ -32,3 +33,5 @@ sed -i -e 's/^ETCD_INITIAL_CLUSTER_STATE.*/ETCD_INITIAL_CLUSTER_STATE="new"/' /e
 
 systemctl enable etcd
 systemctl start etcd
+
+echo "install etcd done"
