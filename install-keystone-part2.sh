@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+#set -e
 su -s /bin/sh -c "keystone-manage db_sync" keystone
 keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
 keystone-manage credential_setup --keystone-user keystone --keystone-group keystone
