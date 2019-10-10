@@ -10,9 +10,9 @@ keystone-manage bootstrap --bootstrap-password 123456 \
   --bootstrap-region-id RegionOne
 # backup /etc/httpd/conf/httpd.conf
 if [ -e /etc/httpd/conf/httpd.conf.backup ]; then
-    cp /etc/httpd/conf/httpd.conf.conf.backup /etc/httpd/conf/httpd.conf.conf
+    cp /etc/httpd/conf/httpd.conf.conf.backup /etc/httpd/conf/httpd.conf
 else
-    cp /etc/httpd/conf/httpd.conf.conf /etc/httpd/conf/httpd.conf.conf.backup
+    cp /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.conf.backup
 fi
 # edit /etc/httpd/conf/httpd.conf 
 # ServerName controller
