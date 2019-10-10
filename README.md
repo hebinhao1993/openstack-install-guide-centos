@@ -111,6 +111,10 @@ sudo ./install-rabbitmq.sh
 
 The Identity service authentication mechanism for services uses Memcached to cache tokens. The memcached service typically runs on the controller node. 所以应该只有controller节点需要安装。
 
+```sh
+sudo ./install-memcached.sh
+```
+
 ## etcd
 
 OpenStack services may use Etcd, a distributed reliable key-value store for distributed key locking, storing configuration, keeping track of service live-ness and other scenarios.
