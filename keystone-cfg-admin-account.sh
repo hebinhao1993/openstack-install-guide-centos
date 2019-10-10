@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 export OS_USERNAME=admin
-export OS_PASSWORD=ADMIN_PASS
+export OS_PASSWORD=123456
 export OS_PROJECT_NAME=admin
 export OS_USER_DOMAIN_NAME=Default
 export OS_PROJECT_DOMAIN_NAME=Default
