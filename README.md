@@ -99,6 +99,8 @@ sudo ./install-openstack-package.sh
 sudo ./install-database.sh
 ```
 
+**注意**这里也使用了固定的ip，所以如果虚拟机重启等情况下，可能需要重新配置。
+
 ## message queue
 
 message queue 通常运行在controller节点上。所以应该只有controller节点需要安装。
