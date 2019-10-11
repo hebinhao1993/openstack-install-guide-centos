@@ -143,6 +143,15 @@ source ./keystone-cfg-admin-account.sh
 ./keystone-verify.sh
 ```
 
+### glance
+
+glance安装在controller节点上。
+
+```sh
+. install-glance.sh
+
+```
+
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
