@@ -2,7 +2,7 @@
 set -e
 
 # install the packages
-yum install openstack-nova-api openstack-nova-conductor openstack-nova-console openstack-nova-novncproxy openstack-nova-scheduler openstack-nova-placement-api
+yum install -y openstack-nova-api openstack-nova-conductor openstack-nova-console openstack-nova-novncproxy openstack-nova-scheduler openstack-nova-placement-api
 
 # back up /etc/nova/nova.conf 
 if [ -e /etc/nova/nova.conf.backup ]; then
