@@ -19,5 +19,6 @@ EOF
 systemctl enable mariadb.service
 systemctl start mariadb.service
 mysql_secure_installation
-
+# 在 mysql_secure_installation 中，需要注意把 disallow root login remotely 设置为 n， 也就是允许远程登陆。不然的话，后续的keystone等安装都会出现问题。
+# 比如`keystone-manage db_sync`就不会成功。 
 echo "install database done"
