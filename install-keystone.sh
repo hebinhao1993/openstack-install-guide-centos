@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-mysql -u root -p123456 < keystone.sql
+mysql -uroot -p123456 < keystone.sql
 yum install -y openstack-keystone httpd mod_wsgi
 
 # backup /etc/keystone/keystone.conf
