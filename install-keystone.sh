@@ -14,10 +14,13 @@ fi
 cat keystone.conf > /etc/keystone/keystone.conf
 echo "finish modify /etc/keystone/keystone.conf"
 
-# the command below seem to return 1, so this will break the flowing commands to execute
+# populate the Identity service database.
+# if the database is not set correctly, the command below with cause problem, the main reason may be that you cannot connect to the database.
 su -s /bin/sh -c "keystone-manage db_sync" keystone
+# Initialize Fernet key repositories
 keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
 keystone-manage credential_setup --keystone-user keystone --keystone-group keystone
+# Bootstrap the Identity service
 keystone-manage bootstrap --bootstrap-password 123456 \
   --bootstrap-admin-url http://controller:5000/v3/ \
   --bootstrap-internal-url http://controller:5000/v3/ \
