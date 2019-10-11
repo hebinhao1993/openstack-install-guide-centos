@@ -14,6 +14,7 @@ fi
 cat keystone.conf > /etc/keystone/keystone.conf
 echo "finish modify /etc/keystone/keystone.conf"
 
+# the command below seem to return 1, so this will break the flowing commands to execute
 su -s /bin/sh -c "keystone-manage db_sync" keystone
 keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
 keystone-manage credential_setup --keystone-user keystone --keystone-group keystone
