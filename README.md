@@ -145,7 +145,7 @@ source ./keystone-cfg-admin-account.sh
 
 ### glance
 
-glance安装在controller节点上。
+glance安装在controller节点上。**注意**`glance-prerequisties.sh`中相关代码可能不能重复执行！
 
 ```sh
 . glance-prerequisties.sh
