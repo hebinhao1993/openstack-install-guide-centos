@@ -145,12 +145,27 @@ source ./keystone-cfg-admin-account.sh
 
 ### glance
 
-glance安装在controller节点上。**注意**`glance-prerequisties.sh`中相关代码可能不能重复执行！
+glance安装在controller节点上。**注意**`glance-prerequisties.sh`中相关openstack代码可能不能重复执行！
 
 ```sh
 . glance-prerequisties.sh
 sudo ./install-glance.sh
 ```
+
+### nova
+
+nova组件需要分别在controller节点和compute节点上安装。
+
+#### nova-controller节点
+
+**注意**`nova-prerequisties.sh`中相关openstack代码可能不能重复执行！
+
+```sh
+. nova-prerequisties.sh
+sudo ./install-nova.sh
+```
+
+#### nova-compute节点
 
 ## reference
 
