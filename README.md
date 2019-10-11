@@ -148,8 +148,8 @@ source ./keystone-cfg-admin-account.sh
 glance安装在controller节点上。
 
 ```sh
-. install-glance.sh
-
+. glance-prerequisties.sh
+sudo ./install-glance.sh
 ```
 
 ## reference
