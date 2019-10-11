@@ -9,7 +9,7 @@ if [ -e /etc/keystone/keystone.conf.backup ]; then
 else
     cp /etc/keystone/keystone.conf /etc/keystone/keystone.conf.backup
 fi
-cp keystone.conf /etc/keystone/keystone.conf
+cat keystone.conf > /etc/keystone/keystone.conf
 su -s /bin/sh -c "keystone-manage db_sync" keystone
 keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
 keystone-manage credential_setup --keystone-user keystone --keystone-group keystone
