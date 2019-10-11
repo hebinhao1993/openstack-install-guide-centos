@@ -167,6 +167,12 @@ sudo ./install-nova.sh
 
 #### nova-compute节点
 
+### neutron
+
+```sh
+
+```
+
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
