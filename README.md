@@ -185,3 +185,6 @@ neutron需要在controller和compute节点上安装。并且提供了两种网�
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
+https://blog.csdn.net/qq_38773184/article/details/82391073
+https://blog.csdn.net/u012881331/article/details/83543668#_22
+https://blog.csdn.net/qq_38773184/article/details/82391073
