@@ -4,7 +4,7 @@ set -e
 # we select the option2: self-service networks
 
 # install packages
-yum install openstack-neutron openstack-neutron-ml2 openstack-neutron-linuxbridge ebtables
+yum install -y openstack-neutron openstack-neutron-ml2 openstack-neutron-linuxbridge ebtables
 
 # backup /etc/neutron/neutron.conf
 if [ -e /etc/neutron/neutron.conf.backup ]; then
