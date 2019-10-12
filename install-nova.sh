@@ -8,7 +8,7 @@ yum install -y openstack-nova-api openstack-nova-conductor openstack-nova-consol
 if [ -e /etc/nova/nova.conf.backup ]; then
     cp /etc/nova/nova.conf.backup /etc/nova/nova.conf 
 else
-    cp /etc/nova/nova.conf.conf /etc/nova/nova.conf.backup
+    cp /etc/nova/nova.conf /etc/nova/nova.conf.backup
 fi
 # modify /etc/nova/nova.conf
 cat nova.conf > /etc/nova/nova.conf
