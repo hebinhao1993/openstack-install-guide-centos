@@ -226,6 +226,16 @@ openstack network agent list
 
 horizon只需要在controller节点上安装。
 
+### cinder
+
+cinder分别在controller节点和storage节点上安装服务
+
+#### cinder-controller
+
+#### cinder-storage
+
+#### cinder-verfication
+
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
