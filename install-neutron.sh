@@ -17,13 +17,31 @@ cat neutron.conf > /etc/neutron/neutron.conf
 
 
 # Configure the Modular Layer 2 (ML2) plug-in
-# /etc/neutron/plugins/ml2/ml2_conf.ini
-# ...
+# backup /etc/neutron/plugins/ml2/ml2_conf.ini
+if [ -e /etc/neutron/plugins/ml2/ml2_conf.ini.backup ]; then
+    cp /etc/neutron/plugins/ml2/ml2_conf.ini.backup /etc/neutron/plugins/ml2/ml2_conf.ini
+else
+    cp /etc/neutron/plugins/ml2/ml2_conf.ini /etc/neutron/plugins/ml2/ml2_conf.ini.backup
+fi
+# edit /etc/neutron/plugins/ml2/ml2_conf.ini
+cat ml2_conf.ini > /etc/neutron/plugins/ml2/ml2_conf.ini
 
 # Configure the Linux bridge agent
-# /etc/neutron/plugins/ml2/linuxbridge_agent.ini\
-# ...
+# backup /etc/neutron/plugins/ml2/linuxbridge_agent.ini
+if [ -e /etc/neutron/plugins/ml2/linuxbridge_agent.ini.backup ]; then
+    cp /etc/neutron/plugins/ml2/linuxbridge_agent.ini.backup /etc/neutron/plugins/ml2/linuxbridge_agent.ini
+else
+    cp /etc/neutron/plugins/ml2/linuxbridge_agent.ini /etc/neutron/plugins/ml2/linuxbridge_agent.ini.backup
+fi
+# edit /etc/neutron/plugins/ml2/linuxbridge_agent.ini
+cat linuxbridge_agent.ini > /etc/neutron/plugins/ml2/linuxbridge_agent.ini
 
 # Configure the DHCP agent
-# /etc/neutron/dhcp_agent.ini
-# ...
+# backup /etc/neutron/dhcp_agent.ini
+if [ -e /etc/neutron/dhcp_agent.ini.backup ]; then
+    cp /etc/neutron/dhcp_agent.ini.backup /etc/neutron/dhcp_agent.ini 
+else
+    cp /etc/neutron/dhcp_agent.ini /etc/neutron/dhcp_agent.ini.backup
+fi
+# edit /etc/neutron/dhcp_agent.ini
+cat dhcp_agent.ini > /etc/neutron/dhcp_agent.ini
