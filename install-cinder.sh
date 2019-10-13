@@ -14,6 +14,8 @@ cat cinder.conf > /etc/cinder/cinder.conf
 
 # here we do not edit /etc/nova/nova.conf, since we have edited it when nova is installed
 # ...
+# [cinder]
+# os_region_name = RegionOne
 
 systemctl restart openstack-nova-api.service
 systemctl enable openstack-cinder-api.service openstack-cinder-scheduler.service
