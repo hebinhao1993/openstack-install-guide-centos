@@ -65,3 +65,4 @@ systemctl enable neutron-server.service neutron-linuxbridge-agent.service neutro
 systemctl start neutron-server.service neutron-linuxbridge-agent.service neutron-dhcp-agent.service neutron-metadata-agent.service
 systemctl enable neutron-l3-agent.service
 systemctl start neutron-l3-agent.service
+echo "install neutron in controller node!"
