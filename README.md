@@ -222,6 +222,10 @@ sudo ./install-neutron-compute.sh
 openstack network agent list
 ```
 
+### horizon
+
+horizon只需要在controller节点上安装。
+
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
