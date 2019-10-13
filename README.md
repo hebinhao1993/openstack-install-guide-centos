@@ -236,6 +236,11 @@ cinder分别在controller节点和storage节点上安装服务
 
 #### cinder-controller
 
+```sh
+. cinder-prerequisites.sh
+sudo ./install-cinder.sh
+```
+
 #### cinder-storage
 
 #### cinder-verfication
