@@ -178,6 +178,23 @@ sudo ./install-nova.sh
 sudo ./install-nova-compute.sh
 ```
 
+#### nova-verification
+
+以下操作在controller节点上操作。
+
+```sh
+. admin-openrc
+openstack compute service list --service nova-compute
+su -s /bin/sh -c "nova-manage cell_v2 discover_hosts --verbose" nova
+```
+
+**注意**每次增加一个compute节点，都需要执行`nova-manage cell_v2 discover_hosts`来注册这些新的节点。或者也可以在`/etc/nova/nova.conf`中设置一个时间。
+
+```none
+[scheduler]
+discover_hosts_in_cells_interval = 300
+```
+
 ### neutron
 
 neutron需要在controller和compute节点上安装。并且提供了两种网络选项，一种是Provider networks，另一种是Self-service networks，后者的功能包含了前者的功能，因此这里选择后者。
