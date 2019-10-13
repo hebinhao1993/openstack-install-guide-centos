@@ -22,3 +22,5 @@ fi
 cat openstack-dashboard.conf > /etc/httpd/conf.d/openstack-dashboard.conf
 
 systemctl restart httpd.service memcached.service
+
+echo "install horizon done!"
