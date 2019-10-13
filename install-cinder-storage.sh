@@ -25,7 +25,7 @@ else
     cp /etc/cinder/cinder.conf /etc/cinder/cinder.conf.backup
 fi
 # edit /etc/cinder/cinder.conf
-cat cinder.conf > /etc/cinder/cinder.conf
+cat cinder-storage.conf > /etc/cinder/cinder.conf
 
 # Finalize installation
 systemctl enable openstack-cinder-volume.service target.service
