@@ -212,6 +212,16 @@ sudo ./install-neutron.sh
 sudo ./install-neutron-compute.sh
 ```
 
+**注意**这里要求`net.bridge.bridge-nf-call-iptables`和`net.bridge.bridge-nf-call-ip6tables`为`1`。详情参考install-neutron-compute.sh。
+
+#### neutron-verification
+
+在controller节点上操作
+
+```sh
+openstack network agent list
+```
+
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
