@@ -19,6 +19,6 @@ else
     cp /etc/httpd/conf.d/openstack-dashboard.conf /etc/httpd/conf.d/openstack-dashboard.conf.backup
 fi
 # edit /etc/httpd/conf.d/openstack-dashboard.conf
-cat local_settings > /etc/httpd/conf.d/openstack-dashboard.conf
+cat openstack-dashboard.conf > /etc/httpd/conf.d/openstack-dashboard.conf
 
 systemctl restart httpd.service memcached.service
