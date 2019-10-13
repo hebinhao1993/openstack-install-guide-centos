@@ -206,6 +206,12 @@ neutron需要在controller和compute节点上安装。并且提供了两种网�
 sudo ./install-neutron.sh
 ```
 
+#### neutron-compute节点
+
+```sh
+sudo ./install-neutron-compute.sh
+```
+
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
