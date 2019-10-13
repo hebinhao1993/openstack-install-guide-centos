@@ -12,3 +12,5 @@ yum install -y openstack-cinder
 systemctl restart openstack-nova-api.service
 systemctl enable openstack-cinder-api.service openstack-cinder-scheduler.service
 systemctl start openstack-cinder-api.service openstack-cinder-scheduler.service
+
+echo "install cinder on controller node Done!"
