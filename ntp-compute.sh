@@ -15,3 +15,6 @@ sed -i -e 's/server 3.centos.pool.ntp.org iburst/#server 3.centos.pool.ntp.org i
 systemctl enable chronyd.service
 systemctl start chronyd.service
 echo "install chrony done"
+
+# verification
+#chronyc sources
