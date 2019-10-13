@@ -13,7 +13,8 @@ else
     cp /etc/neutron/neutron.conf /etc/neutron/neutron.conf.backup
 fi
 # edit /etc/neutron/neutron.conf
-# ...
+cat neutron.conf > /etc/neutron/neutron.conf
+
 
 # Configure the Modular Layer 2 (ML2) plug-in
 # /etc/neutron/plugins/ml2/ml2_conf.ini

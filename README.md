@@ -199,8 +199,11 @@ discover_hosts_in_cells_interval = 300
 
 neutron需要在controller和compute节点上安装。并且提供了两种网络选项，一种是Provider networks，另一种是Self-service networks，后者的功能包含了前者的功能，因此这里选择后者。
 
-```sh
+####　neutron-controller节点
 
+```sh
+. neutron-prerequisites.sh
+sudo ./install-neutron.sh
 ```
 
 ## reference
