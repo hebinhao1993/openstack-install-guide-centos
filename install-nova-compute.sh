@@ -11,7 +11,7 @@ else
     cp /etc/nova/nova.conf /etc/nova/nova.conf.backup
 fi
 # modify /etc/nova/nova.conf
-cat nova.compute.conf > /etc/nova/nova.conf
+cat nova-compute.conf > /etc/nova/nova.conf
 
 systemctl enable libvirtd.service openstack-nova-compute.service
 systemctl start libvirtd.service openstack-nova-compute.service
