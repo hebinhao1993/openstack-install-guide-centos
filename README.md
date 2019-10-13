@@ -226,6 +226,10 @@ openstack network agent list
 
 horizon只需要在controller节点上安装。
 
+```sh
+sudo ./install-horizon.sh
+```
+
 ### cinder
 
 cinder分别在controller节点和storage节点上安装服务
