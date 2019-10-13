@@ -45,3 +45,23 @@ else
 fi
 # edit /etc/neutron/dhcp_agent.ini
 cat dhcp_agent.ini > /etc/neutron/dhcp_agent.ini
+
+
+# backup /etc/neutron/metadata_agent.ini
+if [ -e /etc/neutron/metadata_agent.ini.backup ]; then
+    cp /etc/neutron/metadata_agent.ini.backup /etc/neutron/metadata_agent.ini
+else
+    cp /etc/neutron/metadata_agent.ini /etc/neutron/metadata_agent.ini.backup
+fi
+# edit /etc/neutron/dhcp_agent.ini
+cat metadata_agent.ini > /etc/neutron/metadata_agent.ini
+
+/etc/nova/nova.conf
+
+ln -s /etc/neutron/plugins/ml2/ml2_conf.ini /etc/neutron/plugin.ini
+su -s /bin/sh -c "neutron-db-manage --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/ml2/ml2_conf.ini upgrade head" neutron
+systemctl restart openstack-nova-api.service
+systemctl enable neutron-server.service neutron-linuxbridge-agent.service neutron-dhcp-agent.service neutron-metadata-agent.service
+systemctl start neutron-server.service neutron-linuxbridge-agent.service neutron-dhcp-agent.service neutron-metadata-agent.service
+systemctl enable neutron-l3-agent.service
+systemctl start neutron-l3-agent.service
