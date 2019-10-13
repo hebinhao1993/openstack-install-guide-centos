@@ -168,7 +168,7 @@ nova组件需要分别在controller节点和compute节点上安装。
 **注意**`nova-prerequisties.sh`中相关openstack代码可能不能重复执行！
 
 ```sh
-. nova-prerequisties.sh
+. nova-prerequisites.sh
 sudo ./install-nova.sh
 ```
 
