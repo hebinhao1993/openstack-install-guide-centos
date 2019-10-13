@@ -243,7 +243,18 @@ sudo ./install-cinder.sh
 
 #### cinder-storage
 
+```sh
+sudo ./install-cinder-storage.sh
+```
+
 #### cinder-verfication
+
+在controller节点上：
+
+```sh
+. admin-openrc
+penstack volume service list
+```
 
 ## reference
 
