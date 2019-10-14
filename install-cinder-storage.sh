@@ -26,7 +26,10 @@ else
 fi
 # edit /etc/cinder/cinder.conf
 cat cinder-storage.conf > /etc/cinder/cinder.conf
+echo "modify /etc/cinder/cinder.conf"
 
 # Finalize installation
 systemctl enable openstack-cinder-volume.service target.service
 systemctl start openstack-cinder-volume.service target.service
+
+echo "finish install cinder on storage node!"
