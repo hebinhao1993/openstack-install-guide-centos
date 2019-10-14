@@ -36,6 +36,16 @@ fi
 # edit /etc/neutron/plugins/ml2/linuxbridge_agent.ini
 cat linuxbridge_agent.ini > /etc/neutron/plugins/ml2/linuxbridge_agent.ini
 
+# Configure the layer-3 agent
+# backup /etc/neutron/l3_agent.ini
+if [ -e /etc/neutron/l3_agent.ini.backup ]; then
+    cp /etc/neutron/l3_agent.ini.backup /etc/neutron/l3_agent.ini
+else
+    cp /etc/neutron/l3_agent.ini /etc/neutron/l3_agent.ini.backup
+fi
+# edit /etc/neutron/l3_agent.ini
+cat dhcp_agent.ini > /etc/neutron/dhcp_agent.ini
+
 # Configure the DHCP agent
 # backup /etc/neutron/dhcp_agent.ini
 if [ -e /etc/neutron/dhcp_agent.ini.backup ]; then
@@ -53,7 +63,7 @@ if [ -e /etc/neutron/metadata_agent.ini.backup ]; then
 else
     cp /etc/neutron/metadata_agent.ini /etc/neutron/metadata_agent.ini.backup
 fi
-# edit /etc/neutron/dhcp_agent.ini
+# edit /etc/neutron/metadata_agent.ini
 cat metadata_agent.ini > /etc/neutron/metadata_agent.ini
 
 ln -s /etc/neutron/plugins/ml2/ml2_conf.ini /etc/neutron/plugin.ini
