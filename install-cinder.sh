@@ -12,6 +12,9 @@ fi
 # edit /etc/cinder/cinder.conf
 cat cinder.conf > /etc/cinder/cinder.conf
 
+# populate the Block Storage database:
+su -s /bin/sh -c "cinder-manage db sync" cinder
+
 # here we do not edit /etc/nova/nova.conf, since we have edited it when nova is installed
 # ...
 # [cinder]
