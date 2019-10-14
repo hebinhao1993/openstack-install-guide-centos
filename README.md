@@ -267,6 +267,14 @@ sudo ./install-cinder-storage.sh
 penstack volume service list
 ```
 
+## launch an instance
+
+### create [Provider network](https://docs.openstack.org/install-guide/launch-instance-networks-provider.html)
+
+### create [Self-service network](https://docs.openstack.org/install-guide/launch-instance-networks-selfservice.html)
+
+...
+
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
