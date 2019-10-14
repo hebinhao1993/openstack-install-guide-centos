@@ -159,6 +159,17 @@ glance安装在controller节点上。**注意**`glance-prerequisties.sh`中相�
 sudo ./install-glance.sh
 ```
 
+#### glance-verification
+
+**注意**：这里下载了cirros镜像，后续操作如果需要用到这个镜像的话，则这个步骤必须要执行。
+
+```sh
+. admin-openrc
+wget http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img
+openstack image create "cirros" --file cirros-0.4.0-x86_64-disk.img --disk-format qcow2 --container-format bare --public
+openstack image list
+```
+
 ### nova
 
 nova组件需要分别在controller节点和compute节点上安装。
