@@ -278,7 +278,11 @@ penstack volume service list
 ## reference
 
 [官网地址](https://docs.openstack.org/install-guide/index.html)
+
 https://blog.csdn.net/qq_38773184/article/details/82391073
+
 https://blog.csdn.net/u012881331/article/details/83543668#_22
+
 https://blog.csdn.net/qq_38773184/article/details/82391073
+
 https://docs.openstack.org/python-openstackclient/latest/cli/command-objects/user.html#user-list
