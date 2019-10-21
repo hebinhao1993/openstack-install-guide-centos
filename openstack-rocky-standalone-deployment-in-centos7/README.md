@@ -7,7 +7,10 @@
 操作系统 | centos7
 IP | enp0s3: 10.0.2.4
 
-
+```sh
+systemctl list-unit-files --type=service --ful --no-legend --no-pager | egrep "^(openstack|neutron|quantum)" | grep -v 'neutron-.*-cleanup' | grep enable
+```
+c83d0c0e8b8b4116
 ## 参考
 
 https://blog.csdn.net/weixin_33816611/article/details/91733576

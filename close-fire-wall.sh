@@ -3,4 +3,4 @@ systemctl restart network
 systemctl stop firewalld
 systemctl disable firewalld
 setenforce 0
-sed -i 's/=enforcing/=disabled/' /etc/selinux/config
+sed -i 's/=enforcing/=permissive/' /etc/selinux/config
